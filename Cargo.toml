@@ -1,0 +1,43 @@
+[package]
+name = "auto-aim"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Computer Vision
+opencv = "0.95"
+image = "0.25"
+imageproc = "0.25"
+
+# GUI Framework  
+eframe = "0.29"
+egui = "0.29"
+egui_extras = { version = "0.29", features = ["image"] }
+
+# Performance
+rayon = "1.7"         # Parallel processing
+tokio = { version = "1.32", features = ["full"] }    # Async runtime
+crossbeam = "0.8"     # Lock-free data structures
+
+# Math & Signal Processing
+ndarray = "0.15"      # N-dimensional arrays
+nalgebra = "0.32"     # Linear algebra
+rustfft = "6.1"       # Fast Fourier Transform
+
+# Hardware
+wgpu = "0.17"         # GPU compute
+serialport = "4.2"    # Hardware communication
+embedded-hal = "1.0"  # Hardware abstraction
+
+# Safety & Reliability
+serde = { version = "1.0", features = ["derive"] }   # Serialization
+thiserror = "1.0"     # Error handling
+log = "0.4"           # Logging
+env_logger = "0.10"   # Log implementation
+
+# Additional useful dependencies
+clap = { version = "4.4", features = ["derive"] }    # Command line parsing
+anyhow = "1.0"        # Error handling
+toml = "0.8"          # Configuration file parsing
+reqwest = { version = "0.11", features = ["json"] }  # HTTP client
+chrono = { version = "0.4", features = ["serde"] }   # Date and time
